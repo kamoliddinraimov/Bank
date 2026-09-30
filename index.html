@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bank - Bakiye ve İşlem Takibi</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="app-container">
+        <header class="balance-section">
+            <div class="balance-card wallet-card">
+                <span class="card-icon">👛</span>
+                <div class="card-info">
+                    <span class="card-title">Cüzdan</span>
+                    <span id="wallet-balance" class="card-amount">0,00 TL</span>
+                </div>
+            </div>
+            
+            <div class="balance-row">
+                <div class="balance-card safe-card">
+                    <span class="card-icon">🏦</span>
+                    <div class="card-info">
+                        <span class="card-title">Kasa</span>
+                        <span id="safe-balance" class="card-amount">0,00 TL</span>
+                    </div>
+                </div>
+                
+                <div class="balance-card card-card">
+                    <span class="card-icon">💳</span>
+                    <div class="card-info">
+                        <span class="card-title">Kart</span>
+                        <span id="card-balance" class="card-amount">0,00 TL</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="input-section">
+            <div class="input-wrapper">
+                <input type="text" id="transaction-input" placeholder="" autocomplete="off">
+            </div>
+            <div class="actions-grid">
+<div class="action-group">
+    <span class="group-label">Cüzdan</span>
+    <div class="wallet-buttons">
+        <button id="btn-wallet-plus" class="action-btn plus-btn" title="Cüzdan'a Ekle">+</button>
+        <button id="btn-wallet-minus" class="action-btn minus-btn" title="Cüzdan'dan Çıkar">−</button>
+    </div>
+</div>
+                <div class="action-group">
+                    <div class="button-pair single-primary">
+                        <button id="btn-safe-transfer" class="action-btn primary-btn">🏦 Kasa</button>
+                        <button id="btn-safe-minus" class="action-btn minus-btn" title="Kasa'dan Çıkar">−</button>
+                    </div>
+                </div>
+                <div class="action-group">
+                    <div class="button-pair single-primary">
+                        <button id="btn-card-transfer" class="action-btn primary-btn">💳 Kart</button>
+                        <button id="btn-card-minus" class="action-btn minus-btn" title="Kart'tan Çıkar">−</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="history-section">
+            <div class="history-header">
+                <h3>İşlem Geçmişi</h3>
+                <span id="log-count">0 işlem</span>
+            </div>
+            <div id="log-list" class="log-list">
+                <div class="empty-log">Henüz işlem geçmişi yok.</div>
+            </div>
+        </section>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
